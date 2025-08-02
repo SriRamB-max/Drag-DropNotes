@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
+
 function App() {
   const [notes, setNotes] = useState([]);
   const [newNote, setNewNote] = useState("");
@@ -42,14 +43,18 @@ function App() {
     updatedNotes[index].isEditing = false;
     setNotes(updatedNotes);
   };
-
+  const handleDelete = (index) => {
+    const updatedNotes = notes.filter((_, i) => i !== index);
+    setNotes(updatedNotes);
+  }
   return (
-    <div className="App">
+    <div className="container text-center">
       <h2>Drag and Drop Notes</h2>
 
       {/* Input to add note */}
-      <div className="input-container">
+      <div className="container flex-row">
         <input
+        className="w-75"  
           type="text"
           id="Add"
           placeholder="Enter a new note..."
@@ -57,15 +62,15 @@ function App() {
           onChange={(e) => setNewNote(e.target.value)}
         />
         <label htmlFor="Add">
-          <button onClick={handleAddNote} className="btn">Add Note</button>
+          <button onClick={handleAddNote} className="btn btn-md btn-success ms-2">Add Note</button>
         </label>
       </div>
 
-      <div className="notes-container">
+      <div className="container pt-3">
         {notes.map((note, index) => (
           <div
             key={index}
-            className="note"
+            className="container flex-row pt-2"
             draggable
             onDragStart={() => handleDragStart(index)}
             onDragOver={(e) => e.preventDefault()}
@@ -74,16 +79,18 @@ function App() {
             {note.isEditing ? (
               <>
                 <input
+                  className="container flex-row"
                   type="text"
                   value={note.text}
                   onChange={(e) => handleEditChange(index, e.target.value)}
                 />
-                <button onClick={() => handleSave(index)} className="btn-e">Save</button>
+                <button onClick={() => handleSave(index)} className="btn btn-md bg-success text-white ms-2">Save</button>
               </>
             ) : (
               <>
                 <span>{note.text}</span>
-                <button onClick={() => handleEditToggle(index)} className="btn-e">Edit</button>
+                <button onClick={() => handleEditToggle(index)} className="btn bg-secondary btn-sm text-white ms-3">Edit</button>
+                <button onClick={() => handleDelete(index)} className="btn border btn-sm ms-3">X</button>
               </>
             )}
           </div>
