@@ -1,12 +1,42 @@
-# React + Vite
+# 📝 Drag and Drop Notes App  
+[![React](https://img.shields.io/badge/Built%20with-React-61DBFB?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![JavaScript](https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=for-the-badge&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive React-based notes application with drag-and-drop functionality to organize notes easily.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features  
+✅ Add, edit, and delete notes  
+✅ Drag and drop to reorder notes  
+✅ Persistent storage with LocalStorage  
+✅ Responsive and clean UI  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack  
+- **Frontend:** React, JavaScript, HTML, CSS  
+- **State Management:** React Hooks (useState, useEffect)  
+
+---
+
+## 📷 Screenshots  
+<img width="1365" height="446" alt="Drag and Drop notes" src="https://github.com/user-attachments/assets/b9428b6b-209b-48ee-a941-4c12e149ad10" />
+
+
+---
+
+## 📌 Installation & Setup  
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/drag-drop-notes.git
+
+# Navigate to project folder
+cd drag-drop-notes
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
